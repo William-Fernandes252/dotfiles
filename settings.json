@@ -1,0 +1,167 @@
+{
+	// Window
+	"window.commandCenter": true,
+	"window.titleBarStyle": "custom",
+	// Files
+	"files.exclude": {
+		"**/.classpath": true,
+		"**/.project": true,
+		"**/.settings": true,
+		"**/.factorypath": true
+	},
+	"files.associations": {
+		"**/*.html": "html",
+		"**/templates/**/*.html": "django-html",
+		"**/templates/**/*.txt": "django-txt",
+		"**/requirements{/**,*}.{txt,in}": "pip-requirements",
+		"*.css": "css",
+		".env": "ini",
+		"*.com": "nginx"
+	},
+	"files.watcherExclude": {
+		"**/.git/objects/**": true,
+		"**/.git/subtree-cache/**": true,
+		"**/node_modules/*/**": true
+	},
+	"material-icon-theme.files.associations": {
+		"vitest.config.e2e.ts": "vitest",
+		"jest.config.integration.ts": "jest"
+	},
+	// Emmet
+	"emmet.includeLanguages": {
+		"django-html": "html",
+		"django-template": "html"
+	},
+	// Terminal
+	"terminal.integrated.defaultProfile.windows": "Windows PowerShell",
+	"terminal.integrated.profiles.windows": {
+		"Windows PowerShell": {
+			"source": "PowerShell",
+			"icon": "terminal-powershell",
+			"path": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+		},
+		"Command Prompt": {
+			"path": [
+				"${env:windir}\\Sysnative\\cmd.exe",
+				"${env:windir}\\System32\\cmd.exe"
+			],
+			"args": [],
+			"icon": "terminal-cmd"
+		},
+		"Git Bash": {
+			"source": "Git Bash"
+		}
+	},
+	"terminal.integrated.defaultProfile.linux": "zsh",
+	"terminal.integrated.fontFamily": "'MesloLGS NF', 'monospace'",
+	// Editor
+	"editor.suggestSelection": "first",
+	"editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace'",
+	"editor.fontLigatures": true,
+	"editor.linkedEditing": true,
+	"editor.wordWrap": "bounded",
+	"editor.wordWrapColumn": 120,
+	"editor.wrappingIndent": "same",
+	"editor.stickyScroll.enabled": true,
+	"editor.formatOnSave": true,
+	"editor.acceptSuggestionOnEnter": "off",
+	"editor.cursorSmoothCaretAnimation": "on",
+	"editor.cursorBlinking": "smooth",
+	"editor.smoothScrolling": true,
+	"editor.largeFileOptimizations": false,
+	"editor.minimap.renderCharacters": false,
+	"editor.lineNumbers": "relative",
+	"[python]": {
+		"editor.defaultFormatter": "ms-python.black-formatter",
+		"editor.formatOnSave": true,
+		"editor.codeActionsOnSave": {
+			"source.organizeImports": "explicit",
+			"source.fixAll": "always"
+		},
+		"editor.tabSize": 4,
+		"editor.insertSpaces": true
+	},
+	"[vue][html][javascript][typescript][scss][css][json][javascriptreact][typescriptreact][jsonc][yaml]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.tabSize": 2,
+		"editor.insertSpaces": true
+	},
+	"[django-html]": {
+		"editor.quickSuggestions": {
+			"other": true,
+			"comments": true,
+			"strings": true
+		},
+		"editor.insertSpaces": true,
+		"editor.tabSize": 4,
+		"editor.defaultFormatter": "monosans.djlint",
+		"editor.codeActionsOnSave": {
+			"source.fixAll": "always"
+		}
+	},
+	"[java]": {
+		"editor.defaultFormatter": "redhat.java"
+	},
+	"[dockercompose]": {
+		"editor.defaultFormatter": "ms-azuretools.vscode-docker"
+	},
+	"[prisma]": {
+		"editor.defaultFormatter": "Prisma.prisma",
+		"editor.formatOnSave": true,
+		"editor.codeActionsOnSave": {
+			"source.fixAll": "always"
+		}
+	},
+	"editor.renderLineHighlight": "gutter",
+	"cSpell.language": "en,pt,pt_BR",
+	// HTML
+	"html.format.indentInnerHtml": true,
+	"html.format.extraLiners": "",
+	"html.format.templating": true,
+	// Python
+	"python.testing.unittestEnabled": true,
+	"isort.args": ["--profile", "black"],
+	// C++
+	"C_Cpp.clang_format_fallbackStyle": "Microsoft",
+	// Prettier
+	"prettier.arrowParens": "avoid",
+	"prettier.singleQuote": true,
+	"prettier.useTabs": true,
+	// Workbench
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.sideBar.location": "right",
+	// Vim
+	"vim.useCtrlKeys": false,
+	"vim.insertModeKeyBindings": [
+		{
+			"before": ["k", "j"],
+			"after": ["<Esc>"]
+		}
+	],
+	"vim.useSystemClipboard": true,
+	"vim.easymotion": true,
+	"vim.leader": " ",
+	"vim.smartRelativeLine": true,
+	// Git
+	"git.autofetch": true,
+	// Icons
+	"material-icon-theme.activeIconPack": "nest",
+	"redhat.telemetry.enabled": false,
+	"diffEditor.ignoreTrimWhitespace": false,
+	"github.copilot.enable": {
+		"*": true,
+		"plaintext": false,
+		"markdown": false,
+		"scminput": false
+	},
+	// Jest
+	"jest.runMode": "on-demand",
+	// Markdown
+	"markdownlint.config": {
+		"MD033": false,
+		"MD041": false
+	},
+	"github.copilot.editor.enableAutoCompletions": true,
+	// Haskell
+	"haskell.manageHLS": "GHCup"
+}
