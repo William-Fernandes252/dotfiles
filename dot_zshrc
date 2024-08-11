@@ -128,3 +128,6 @@ eval "$(starship init zsh)"
 # Atuin
 . "$HOME/.atuin/bin/env"
 eval "$(atuin init zsh)"
+
+if [ -e /home/william/.nix-profile/etc/profile.d/nix.sh ]; then . /home/william/.nix-profile/etc/profile.d/nix.sh; fi
+
