@@ -103,10 +103,6 @@ source $ZSH/oh-my-zsh.sh
 # Add binaries to PATH
 export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$PATH
 
-# Aliases
-alias cat="bat --style=auto"
-alias ls="exa --icons"
-
 # Zoxide Initialization
 eval "$(zoxide init zsh)"
 
