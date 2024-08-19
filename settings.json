@@ -53,10 +53,23 @@
 		}
 	},
 	"terminal.integrated.defaultProfile.linux": "zsh",
-	"terminal.integrated.fontFamily": "'MesloLGS NF', 'monospace'",
+	"terminal.integrated.profiles.linux": {
+		"bash": {
+			"path": "bash",
+			"icon": "terminal-bash"
+		},
+		"zsh": {
+			"path": "/usr/bin/zsh"
+		},
+		"tmux": {
+			"path": "tmux",
+			"icon": "terminal-tmux"
+		}
+	},
+	"terminal.integrated.fontFamily": "'Fira Code', 'Hack Nerd Font', 'monospace'",
 	// Editor
 	"editor.suggestSelection": "first",
-	"editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace'",
+	"editor.fontFamily": "'Fira Code', 'Hack Nerd Font', 'monospace'",
 	"editor.fontLigatures": true,
 	"editor.linkedEditing": true,
 	"editor.wordWrap": "bounded",
