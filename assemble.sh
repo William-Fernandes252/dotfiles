@@ -40,22 +40,27 @@ apt install -y \
   libncurses-dev \
   tk-dev \
   libgmp-dev \
-  libgmp10
+  libgmp10 \
+  wget \
+  gpg \
+  apt-transport-https \
 
 # Make ZSH the default shell
 chsh -s $(which zsh)
 
 # Install Github CLI
-(type -p wget >/dev/null || (apt update && apt-get install wget -y)) \
-&& mkdir -p -m 755 /etc/apt/keyrings \
+mkdir -p -m 755 /etc/apt/keyrings \
 && wget -qO- https://cli.github.com/packages/githubcli-archive-keyring.gpg | tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null \
 && chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg \
 && echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
-&& apt update \
 && apt install gh -y
 
+# Install AWS CLI
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "/tmp/awscliv2.zip"
+unzip /tmp/awscliv2.zip -d /tmp
+sh /tmp/aws/install
+
 # Install VSCode
-apt-get install wget gpg
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
 echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" |sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
