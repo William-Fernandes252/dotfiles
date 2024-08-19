@@ -23,8 +23,24 @@ apt remove --autoremove snapd -y
 apt install flatpak gnome-software-plugin-flatpak -y
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-# Install APT programs
-apt install -y curl build-essential git zsh cargo fonts-firacode
+# Install basic programs and libraries
+apt install -y \
+  curl \
+  build-essential \
+  git \
+  zsh \
+  cargo \
+  zlib1g-dev \
+  libffi-dev \
+  libssl-dev \
+  libbz2-dev \
+  libreadline-dev \
+  libsqlite3-dev \
+  liblzma-dev \
+  libncurses-dev \
+  tk-dev \
+  libgmp-dev \
+  libgmp10
 
 # Make ZSH the default shell
 chsh -s $(which zsh)
