@@ -44,6 +44,8 @@ apt install -y \
   wget \
   gpg \
   apt-transport-https \
+  ca-certificates \
+  gnupg \
 
 # Make ZSH the default shell
 chsh -s $(which zsh)
@@ -59,6 +61,11 @@ mkdir -p -m 755 /etc/apt/keyrings \
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "/tmp/awscliv2.zip"
 unzip /tmp/awscliv2.zip -d /tmp
 sh /tmp/aws/install
+
+# Install GCP CLI
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | gpg --dearmor -o /usr/share/keyrings/cloud.google.gpg
+echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+apt update && apt install google-cloud-cli
 
 # Install VSCode
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
