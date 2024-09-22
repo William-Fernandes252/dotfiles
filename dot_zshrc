@@ -125,8 +125,5 @@ eval "$(starship init zsh)"
 . "$HOME/.atuin/bin/env"
 eval "$(atuin init zsh)"
 
-# GHcup
-[ -f "/home/william/.ghcup/env" ] && . "/home/william/.ghcup/env"
-
 # Pulumi
 export PATH=$PATH:/home/william/.pulumi/bin
