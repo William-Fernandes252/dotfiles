@@ -101,7 +101,7 @@ chmod g+rwx "$HOME/.docker" -R
 
 # Install remaining programs
 flatpak install -y com.google.Chrome org.mozilla.Thunderbird com.bitwarden.desktop rest.insomnia.Insomnia nz.mega.MEGAsync
-cargo install zoxide bat exa ripgrep
+cargo install zoxide bat exa ripgrep git-delta
 curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply William-Fernandes252
