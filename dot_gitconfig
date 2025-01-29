@@ -1,0 +1,6 @@
+[core]
+	autocrlf = false
+
+[user]
+	name = William Fernandes Dias
+	email = william.winchester1967@gmail.com
