@@ -105,11 +105,12 @@ sudo flatpak install -y com.google.Chrome org.mozilla.Thunderbird com.bitwarden.
 cargo install zoxide bat exa ripgrep git-delta
 curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply William-Fernandes252
+sh -c "$(curl -fsLS get.chezmoi.io)"
 curl -sS https://starship.rs/install.sh | sh
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 curl -sSL https://install.python-poetry.org | python3 -
 curl -fsSL https://get.pnpm.io/install.sh | sh -
+pnpm install -g @bitwarden/cli
 
 # Install Oh My Zsh plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -127,9 +128,6 @@ sudo chmod 644 ~/.ssh/known_hosts
 # Initialize Chezmoi
 chezmoi init --ssh $GITHUB_USERNAME
 chezmoi update
-
-# Login on Atuin
-atuin login
 
 # Finalize
 sudo apt -y autoremove
