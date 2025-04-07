@@ -110,12 +110,12 @@ curl -sS https://starship.rs/install.sh | sh
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 curl -sSL https://install.python-poetry.org | python3 -
 curl -fsSL https://get.pnpm.io/install.sh | sh -
+curl https://mise.run | sh
 pnpm install -g @bitwarden/cli
 
 # Install Oh My Zsh plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 
 # Fix SSH keys ownership, permissions and mode
 sudo chown -R $USER:$USER ~/.ssh
