@@ -109,7 +109,7 @@ curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh 
 curl -sSL https://install.python-poetry.org | python3 -
 curl -fsSL https://get.pnpm.io/install.sh | sh -
 curl https://mise.run | sh
-mise install python node java cargo
+mise use -g python node java cargo usage
 cargo install zoxide bat exa ripgrep git-delta
 pnpm install -g @bitwarden/cli
 
