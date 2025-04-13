@@ -54,7 +54,6 @@ sudo apt install -y \
   build-essential \
   git \
   zsh \
-  cargo \
   zlib1g-dev \
   libffi-dev \
   libssl-dev \
@@ -102,7 +101,6 @@ sudo chmod g+rwx "$HOME/.docker" -R
 
 # Install remaining programs
 sudo flatpak install -y com.google.Chrome org.mozilla.Thunderbird com.bitwarden.desktop rest.insomnia.Insomnia nz.mega.MEGAsync
-cargo install zoxide bat exa ripgrep git-delta
 curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 sh -c "$(curl -fsLS get.chezmoi.io)"
@@ -111,6 +109,8 @@ curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh 
 curl -sSL https://install.python-poetry.org | python3 -
 curl -fsSL https://get.pnpm.io/install.sh | sh -
 curl https://mise.run | sh
+mise install python node java cargo
+cargo install zoxide bat exa ripgrep git-delta
 pnpm install -g @bitwarden/cli
 
 # Install Oh My Zsh plugins
