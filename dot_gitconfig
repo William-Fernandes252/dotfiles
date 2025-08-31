@@ -1,5 +1,7 @@
 [core]
 	autocrlf = false
+	editor = code --wait
+	excludesFile = ~/.gitignore
 
 [user]
 	name = William Fernandes Dias
