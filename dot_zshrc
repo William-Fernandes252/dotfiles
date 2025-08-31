@@ -130,3 +130,6 @@ export PATH=$PATH:/home/william/.pulumi/bin
 
 # Mise
 eval "$($(which mise) activate zsh)"
+
+# UV
+eval "$(uv generate-shell-completion zsh)"
