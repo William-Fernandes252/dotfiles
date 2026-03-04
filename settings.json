@@ -7,7 +7,7 @@
 		"**/.classpath": true,
 		"**/.project": true,
 		"**/.settings": true,
-		"**/.factorypath": true
+		"**/.factorypath": true,
 	},
 	"files.associations": {
 		"**/*.html": "html",
@@ -15,22 +15,23 @@
 		"**/templates/**/*.txt": "django-txt",
 		"**/requirements{/**,*}.{txt,in}": "pip-requirements",
 		"*.css": "css",
-		".env": "ini",
-		"*.com": "nginx"
+		".env": "dotenv",
+		"*.com": "nginx",
+		".env*": "dotenv"
 	},
 	"files.watcherExclude": {
 		"**/.git/objects/**": true,
 		"**/.git/subtree-cache/**": true,
-		"**/node_modules/*/**": true
+		"**/node_modules/*/**": true,
 	},
 	"material-icon-theme.files.associations": {
 		"vitest.config.e2e.ts": "vitest",
-		"jest.config.integration.ts": "jest"
+		"jest.config.integration.ts": "jest",
 	},
 	// Emmet
 	"emmet.includeLanguages": {
 		"django-html": "html",
-		"django-template": "html"
+		"django-template": "html",
 	},
 	// Terminal
 	"terminal.integrated.defaultProfile.windows": "Windows PowerShell",
@@ -38,45 +39,45 @@
 		"Windows PowerShell": {
 			"source": "PowerShell",
 			"icon": "terminal-powershell",
-			"path": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+			"path": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
 		},
 		"Command Prompt": {
 			"path": [
 				"${env:windir}\\Sysnative\\cmd.exe",
-				"${env:windir}\\System32\\cmd.exe"
+				"${env:windir}\\System32\\cmd.exe",
 			],
 			"args": [],
-			"icon": "terminal-cmd"
+			"icon": "terminal-cmd",
 		},
 		"Git Bash": {
-			"source": "Git Bash"
-		}
+			"source": "Git Bash",
+		},
 	},
 	"terminal.integrated.defaultProfile.linux": "zsh",
 	"terminal.integrated.profiles.linux": {
 		"bash": {
 			"path": "bash",
-			"icon": "terminal-bash"
+			"icon": "terminal-bash",
 		},
 		"zsh": {
-			"path": "/usr/bin/zsh"
+			"path": "/usr/bin/zsh",
 		},
 		"tmux": {
 			"path": "tmux",
-			"icon": "terminal-tmux"
-		}
+			"icon": "terminal-tmux",
+		},
 	},
-	"terminal.integrated.fontFamily": "'Fira Code', 'Hack Nerd Font', 'monospace'",
+	"terminal.integrated.fontFamily": "FiraCode Nerd Font Propo, Hack Nerd Font Mono, monospace",
+	"terminal.integrated.fontLigatures.enabled": true,
 	// Editor
 	"editor.suggestSelection": "first",
-	"editor.fontFamily": "'Fira Code', 'Hack Nerd Font', 'monospace'",
+	"editor.fontFamily": "FiraCode Nerd Font, Hack Nerd Font, monospace",
 	"editor.fontLigatures": true,
 	"editor.linkedEditing": true,
 	"editor.wordWrap": "bounded",
 	"editor.wordWrapColumn": 120,
 	"editor.wrappingIndent": "same",
 	"editor.stickyScroll.enabled": true,
-	"editor.formatOnSave": true,
 	"editor.acceptSuggestionOnEnter": "off",
 	"editor.cursorSmoothCaretAnimation": "on",
 	"editor.cursorBlinking": "smooth",
@@ -84,72 +85,99 @@
 	"editor.largeFileOptimizations": false,
 	"editor.minimap.renderCharacters": false,
 	"editor.lineNumbers": "relative",
+	"editor.insertSpaces": true,
+	"editor.renderLineHighlight": "gutter",
+	"editor.tokenColorCustomizations": {
+		"[*Light*]": {
+			"textMateRules": [
+				{
+					"scope": "ref.matchtext",
+					"settings": {
+						"foreground": "#000"
+					}
+				}
+			]
+		},
+		"[*Dark*]": {
+			"textMateRules": [
+				{
+					"scope": "ref.matchtext",
+					"settings": {
+						"foreground": "#fff"
+					}
+				}
+			]
+		},
+		"textMateRules": []
+	},
 	"[python]": {
-		"editor.defaultFormatter": "ms-python.black-formatter",
+		"editor.defaultFormatter": "charliermarsh.ruff",
 		"editor.formatOnSave": true,
 		"editor.codeActionsOnSave": {
 			"source.organizeImports": "explicit",
-			"source.fixAll": "always"
+			"source.fixAll": "always",
 		},
 		"editor.tabSize": 4,
-		"editor.insertSpaces": true
 	},
 	"[vue][html][javascript][typescript][scss][css][json][javascriptreact][typescriptreact][jsonc][yaml]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
 		"editor.tabSize": 2,
-		"editor.insertSpaces": true
+		"editor.insertSpaces": true,
+	},
+	"[haskell]": {
+		"editor.tabSize": 2,
 	},
 	"[django-html]": {
 		"editor.quickSuggestions": {
 			"other": true,
 			"comments": true,
-			"strings": true
+			"strings": true,
 		},
-		"editor.insertSpaces": true,
 		"editor.tabSize": 4,
 		"editor.defaultFormatter": "monosans.djlint",
 		"editor.codeActionsOnSave": {
-			"source.fixAll": "always"
-		}
+			"source.fixAll": "always",
+		},
 	},
 	"[java]": {
-		"editor.defaultFormatter": "redhat.java"
-	},
-	"[dockercompose]": {
-		"editor.defaultFormatter": "ms-azuretools.vscode-docker"
+		"editor.defaultFormatter": "redhat.java",
 	},
 	"[prisma]": {
 		"editor.defaultFormatter": "Prisma.prisma",
 		"editor.formatOnSave": true,
 		"editor.codeActionsOnSave": {
-			"source.fixAll": "always"
-		}
+			"source.fixAll": "always",
+		},
 	},
-	"editor.renderLineHighlight": "gutter",
+	"[dotenv]": {
+		"editor.defaultFormatter": "dotenv.dotenv-vscode",
+		"editor.formatOnSave": true,
+		"editor.codeActionsOnSave": {
+			"source.fixAll": "always",
+		},
+	},
 	"cSpell.language": "en,pt,pt_BR",
 	// HTML
 	"html.format.indentInnerHtml": true,
 	"html.format.extraLiners": "",
 	"html.format.templating": true,
 	// Python
-	"python.testing.unittestEnabled": true,
-	"isort.args": ["--profile", "black"],
-	// C++
-	"C_Cpp.clang_format_fallbackStyle": "Microsoft",
+	"python.testing.pytestEnabled": true,
+	"python.pyrefly.disableLanguageServices": true,
 	// Prettier
 	"prettier.arrowParens": "avoid",
 	"prettier.singleQuote": true,
 	"prettier.useTabs": true,
 	// Workbench
-	"workbench.iconTheme": "material-icon-theme",
 	"workbench.sideBar.location": "right",
+	"workbench.iconTheme": "material-icon-theme",
 	// Vim
 	"vim.useCtrlKeys": false,
 	"vim.insertModeKeyBindings": [
 		{
 			"before": ["k", "j"],
-			"after": ["<Esc>"]
-		}
+			"after": ["<Esc>"],
+		},
 	],
 	"vim.useSystemClipboard": true,
 	"vim.easymotion": true,
@@ -157,24 +185,63 @@
 	"vim.smartRelativeLine": true,
 	// Git
 	"git.autofetch": true,
+	"git.confirmSync": false,
 	// Icons
 	"material-icon-theme.activeIconPack": "nest",
-	"redhat.telemetry.enabled": false,
-	"diffEditor.ignoreTrimWhitespace": false,
-	"github.copilot.enable": {
-		"*": true,
-		"plaintext": false,
-		"markdown": false,
-		"scminput": false
-	},
-	// Jest
-	"jest.runMode": "on-demand",
 	// Markdown
 	"markdownlint.config": {
 		"MD033": false,
-		"MD041": false
+		"MD041": false,
 	},
-	"github.copilot.editor.enableAutoCompletions": true,
-	// Haskell
-	"haskell.manageHLS": "GHCup"
+	// Explorer
+	"explorer.confirmDelete": false,
+	// TypeScript
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	// GitHub
+	"github.copilot.nextEditSuggestions.enabled": true,
+	// Mise
+	"mise.configureExtensionsAutomatically": false,
+	// Docker
+	"docker.extension.enableComposeLanguageServer": false,
+	// Spell Checker
+	"cSpell.enabledSchemes": {
+		"comment": true,
+		"file": true,
+		"gist": true,
+		"repo": true,
+		"sftp": true,
+		"untitled": true,
+		"vscode-notebook-cell": true,
+		"vscode-scm": true,
+		"vscode-userdata": true,
+		"vscode-vfs": true,
+		"vsls": true,
+		"overleaf-workshop": true
+	},
+	// Micellaneous
+	"mise.binPath": "/home/william/.local/bin/mise",
+	"dotenv.enableAutocloaking": false,
+	"security.workspace.trust.untrustedFiles": "open",
+	"explorer.confirmDragAndDrop": false,
+	"chat.tools.terminal.autoApprove": {
+		"gh": true,
+		"sed": true,
+		"uv": true,
+		"make": true,
+	},
+	"gitlens.ai.model": "vscode",
+	"gitlens.ai.vscode.model": "copilot:gpt-4.1",
+	"diffEditor.codeLens": true,
+	"chat.mcp.gallery.enabled": true,
+	"json.schemaDownload.trustedDomains": {
+		"https://schemastore.azurewebsites.net/": true,
+		"https://raw.githubusercontent.com/": true,
+		"https://www.schemastore.org/": true,
+		"https://json.schemastore.org/": true,
+		"https://json-schema.org/": true,
+		"https://biomejs.dev": true,
+	},
+	"claudeCode.preferredLocation": "panel",
+	"chat.editing.confirmEditRequestRemoval": false,
+	"python.languageServer": "Default",
 }
