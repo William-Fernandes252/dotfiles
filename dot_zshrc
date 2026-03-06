@@ -103,20 +103,10 @@ source $ZSH/oh-my-zsh.sh
 # Add binaries to PATH
 export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$PATH
 
-# Zoxide Initialization
-eval "$(zoxide init zsh)"
-
 # Android
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-# PNPM
-export PNPM_HOME="/home/william/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
 
 # Starship
 eval "$(starship init zsh)"
@@ -125,11 +115,11 @@ eval "$(starship init zsh)"
 . "$HOME/.atuin/bin/env"
 eval "$(atuin init zsh)"
 
-# Pulumi
-export PATH=$PATH:/home/william/.pulumi/bin
+# Mise
+eval "$(mise activate zsh)"
 
 # UV
 eval "$(uv generate-shell-completion zsh)"
 
-# Mise
-eval "$(mise activate zsh)"
+# Zoxide Initialization
+eval "$(zoxide init zsh)"
